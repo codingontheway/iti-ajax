@@ -1,7 +1,6 @@
-async function showData() {
-    const req = await fetch('https://reqres.in/api/users');
-    const { data } = await req.json();
+import data from './fechData.js';
 
+function showData(data) {
     const tbody = document.querySelector('tbody');
 
     data.forEach((user) => {
@@ -16,4 +15,4 @@ async function showData() {
     });
 }
 
-showData();
+showData(data);
